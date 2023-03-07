@@ -34,7 +34,6 @@ export default function Feed() {
           flex: 2,
         }}
       >
-        something again again
         <Typography
           variant="h4"
           fontWeight={"bold"}
