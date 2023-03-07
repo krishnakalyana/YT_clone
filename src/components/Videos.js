@@ -11,7 +11,7 @@ function Videos({ videos }) {
         return (
           <Box key={index}>
             {item.id.videoId && <VideoCard video={item} />}
-            {/* {item.id.channelId && <ChannelCard channel={item} />} */}
+            {item.id.channelId && <ChannelCard channelDetail={item} />}
           </Box>
         );
       })}
