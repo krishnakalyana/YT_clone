@@ -5,16 +5,15 @@ import { fetchFromApi } from "../utils/fetchFromApi";
 import { useParams } from "react-router-dom";
 export default function SearchFeed() {
   const [videos, setVideos] = useState([]);
-  const { id } = useParams();
-  const searchTerm = id;
-  console.log("sea", searchTerm);
+  const { searchTerm } = useParams();
+
   useEffect(() => {
     fetchFromApi(`search?part=snippet&q=${searchTerm}`).then((data) => {
       console.log(data);
       setVideos(data.items);
     });
   }, [searchTerm]);
-  console.log("search", searchTerm);
+
   return (
     <Box
       p={2}

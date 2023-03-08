@@ -9,7 +9,7 @@ function SearchBar() {
     e.preventDefault();
     if (searchTerm) {
       console.log("search", searchTerm);
-      navigate(`/video/${searchTerm}`);
+      navigate(`/search/${searchTerm}`);
       setSearchTerm("");
     }
   };
